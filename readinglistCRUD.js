@@ -25,11 +25,11 @@ console.log('new book added: ' , addNewBook(newBookToAdd));
 //e.g. change "Dune" from unread to read;  change false to true
 //use .map to go through each item in array and make a new array if
 
-const updateList = origBookList.map((x) => {
-if(x.id === 1){
-  return{...x, read: !x.read}
+const updateList = origBookList.map((book) => {
+if(book.id === 1){
+  return{...book, read: !book.read}
 }
-return x 
+return book 
 })
 
 console.log('original: ' , origBookList)
@@ -40,9 +40,9 @@ console.log('updated: ', updateList)
 //elements that pass the test implemented by the provided
 //function
 
-const deleteBook = origBookList.filter((x) =>{
-  if(x.read === false) //if read: is false, means the book still 
-   return x            //needs to be read so keep it on the list
+const deleteBook = origBookList.filter((book) =>{
+  if(book.read === false) //if read: is false, means the book still 
+   return book            //needs to be read so keep it on the list
                        //want to .filter out all the entries that say 'true' 
 })
 console.log('deleted list: ' , deleteBook)

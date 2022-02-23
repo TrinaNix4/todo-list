@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-import List from './List';
+import TvShows from './TvShows';
 
 class App extends Component {
   state = { 
-    todos: [
-      { id: 1, name: 'Learn Rails', complete: true },
-      { id: 2, name: 'Learn React', complete: false },
-      { id: 3, name: 'Learn Redux', complete: false },
+    tvShows: [
+      { id: 1, name: 'Arcane', watched: false },
+      { id: 2, name: 'The Gilded Age', watched: false },
+      { id: 3, name: 'Euphoria', watched: true },
     ]
   }
 
-  render() {
-    const { todos } = this.state;
- 
+  render() { //destructuring
+    const { tvShows } = this.state;
+ //tvShows = tvShows is assigning a variable for Shows class 
     return (
       <div>
-      <List name="Coding Todo List" items={todos} />
-      <List name = "Fun Todo List" items={todos}/>
+        
+      {<TvShows name="Shows to Watch" tvShows={tvShows} />}
+   
       </div>
     );
   }
