@@ -15,7 +15,8 @@ class App extends Component {
  
     return (
       <div>
-      <List name="Todo List" items={todos} />
+      <List name="Coding Todo List" items={todos} />
+      <List name = "Fun Todo List" items={todos}/>
       </div>
     );
   }
